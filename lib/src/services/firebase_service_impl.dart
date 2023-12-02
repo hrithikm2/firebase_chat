@@ -7,15 +7,13 @@ class FirebaseService implements FirebaseServiceRepo {
     required this.instance,
     required this.collectionName,
     required this.docName,
-    required this.chats,
   });
   final FirebaseFirestore instance;
   final String collectionName;
   final String docName;
-  final List<Map<String, dynamic>> chats;
 
   @override
-  Future<void> sendMessageToFirebase() async {
+  Future<void> sendMessageToFirebase(List<Map<String, dynamic>> chats) async {
     //Send message here.
 
     await instance
